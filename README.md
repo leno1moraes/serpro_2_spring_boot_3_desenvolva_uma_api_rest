@@ -16,11 +16,13 @@
 - [get] 127.0.0.1:8090/hello
 
 - [post] 127.0.0.1:8090/medicos
+    
     {
     "nome": "Rodrigo Ferreira",
     "email": "rodrigo.ferreira@voll.med",
     "crm": "123456",
-    "especialidade": "ortopedia",
+    "telefone":"63999999999",
+    "especialidade": "ORTOPEDIA",
     "endereco": {
         "logradouro": "rua 1",
         "bairro": "bairro",
@@ -30,9 +32,47 @@
         "numero": "1",
         "complemento": "complemento"
         }
-    }    
+    } 
+
+
+    {
+    "nome": "Maria Julia",
+    "email": "maria.julia@voll.med",
+    "crm": "123457",
+    "telefone":"63999999990",
+    "especialidade": "DERMATOLOGIA",
+    "endereco": {
+        "logradouro": "rua 3",
+        "bairro": "bairro",
+        "cep": "12345679",
+        "cidade": "Brasilia",
+        "uf": "DF",
+        "numero": "1",
+        "complemento": "complemento"
+        }
+    }
+
+
+    {
+    "nome": "Lucia Volpato",
+    "email": "lucia.volpato@voll.med",
+    "crm": "123458",
+    "telefone":"63999999991",
+    "especialidade": "CARDIOLOGIA",
+    "endereco": {
+        "logradouro": "rua 4",
+        "bairro": "bairro",
+        "cep": "12345670",
+        "cidade": "Brasilia",
+        "uf": "DF",
+        "numero": "1",
+        "complemento": "complemento"
+        }
+    }
+
 
 - [post] 127.0.0.1:8090/pacientes
+    
     {
     "nome": "Spancer Bourne",
     "email": "spancer.bourne@email.com.br",
@@ -49,6 +89,7 @@
         }
     }
 
+- [get] 127.0.0.1:8090/medicos
 
 ## Banco de dados
 
