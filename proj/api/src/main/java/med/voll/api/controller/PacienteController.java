@@ -21,12 +21,12 @@ import org.springframework.web.util.UriComponentsBuilder;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 //rever aqui - fim
-import med.voll.api.paciente.DadosAtualizacaoPaciente;
-import med.voll.api.paciente.DadosCadastroPaciente;
-import med.voll.api.paciente.DadosDetalhamentoPaciente;
-import med.voll.api.paciente.DadosListaPaciente;
-import med.voll.api.paciente.Paciente;
-import med.voll.api.paciente.PacienteRepository;
+import med.voll.api.domain.paciente.DadosAtualizacaoPaciente;
+import med.voll.api.domain.paciente.DadosCadastroPaciente;
+import med.voll.api.domain.paciente.DadosDetalhamentoPaciente;
+import med.voll.api.domain.paciente.DadosListaPaciente;
+import med.voll.api.domain.paciente.Paciente;
+import med.voll.api.domain.paciente.PacienteRepository;
 
 @RestController
 @RequestMapping("pacientes")
@@ -35,6 +35,7 @@ public class PacienteController {
     @Autowired
     private PacienteRepository repository;
 
+    @SuppressWarnings("rawtypes")
     @PostMapping
     @Transactional
     public ResponseEntity cadastrar(@RequestBody @Valid DadosCadastroPaciente dados, UriComponentsBuilder uriBuilder) {
@@ -51,6 +52,7 @@ public class PacienteController {
         return ResponseEntity.ok(page);
     }
     
+    @SuppressWarnings("rawtypes")
     @PutMapping
     @Transactional
     public ResponseEntity atualizar(@RequestBody @Valid DadosAtualizacaoPaciente dados) {
@@ -60,6 +62,7 @@ public class PacienteController {
         return ResponseEntity.ok(new DadosDetalhamentoPaciente(paciente));
     }
     
+    @SuppressWarnings("rawtypes")
     @DeleteMapping("/{id}")
     @Transactional
     public ResponseEntity excluir(@PathVariable Long id) {
@@ -69,6 +72,7 @@ public class PacienteController {
         return ResponseEntity.noContent().build();
     }
 
+    @SuppressWarnings("rawtypes")
     @GetMapping("/{id}")
     public ResponseEntity detalhar(@PathVariable Long id) {
         var paciente = repository.getReferenceById(id);
