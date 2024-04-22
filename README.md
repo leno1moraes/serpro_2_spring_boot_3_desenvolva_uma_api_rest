@@ -1,7 +1,7 @@
 # Nova branch criada a partir do main para o curso Spring Boot 3: aplique boas práticas e proteja uma API Rest
 
 
-# serpro_2_spring_boot_3_desenvolva_uma_api_rest
+# Spring Boot 3: documente, teste e prepare uma API para o deploy
 
 
 ## Instruções
